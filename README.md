@@ -1,5 +1,5 @@
 # machinelearning
-my personal work
+my personal work from summer 2020
 
 ## resources
 freecodecamp tensorflow:
