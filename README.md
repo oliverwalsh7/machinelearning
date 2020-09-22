@@ -12,5 +12,5 @@ ml for bg:
 https://www.youtube.com/watch?v=9f-GarcDY58
 
 books: 
-Hands-On Machine Learning with Scikit-Learn, Keras, and Tensorflow
+Hands-On Machine Learning with Scikit-Learn, Keras, and Tensorflow, O'Reilly
 
