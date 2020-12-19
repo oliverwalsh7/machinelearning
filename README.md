@@ -1,7 +1,9 @@
 # machinelearning
-my personal work from summer 2020
 
 ## resources
+sentdex series:
+https://www.youtube.com/watch?v=JcI5Vnw0b2c&list=PLQVvvaa0QuDfKTOs3Keq_kaG2P55YRn5v&index=2
+
 freecodecamp tensorflow:
 https://www.youtube.com/watch?v=tPYj3fFJGjk
 
