@@ -4,17 +4,24 @@
 from statistics import mean
 import numpy as np
 import matplotlib.pyplot as plt
+from matplotlib import style
+
+style.use('fivethirtyeight')
 
 xs = np.array([1, 2, 3, 4, 5, 6], dtype = np.float64)
 ys = np.array([5, 4, 6, 5, 6, 7], dtype = np.float64)
 
-def best_fit_slope(xs, ys):
+def best_fit(xs, ys): # slope and intercept, m & b
     
     m = (((mean(xs) * mean(ys)) - mean(xs * ys)) /
-          ((mean(xs)**2) - mean(xs**2))) # slope
-    
-    return m
+          ((mean(xs)**2) - mean(xs**2))) # slope of best fi line
+    b = mean(ys) - m*mean(xs)
+    return m, b
 
-m = best_fit_slope(xs, ys)
+m, b = best_fit(xs, ys)
 
-print(m)
+regression_line = [(m*x) + b for x in xs]
+
+plt.scatter(xs, ys)
+plt.plot(xs, regression_line)
+plt.show()
