@@ -1,4 +1,5 @@
 # sentdex python machine learning tutorial
+# test run on quandl mock stock exchange data
 
 import pandas as pd
 import quandl, math, datetime
@@ -7,6 +8,7 @@ from sklearn import preprocessing, model_selection, svm
 from sklearn.linear_model import LinearRegression
 import matplotlib.pyplot as plt
 from matplotlib import style
+import pickle
 
 style.use('ggplot')
 
@@ -38,8 +40,16 @@ y = np.array(df['label'])
 
 x_train, x_test, y_train, y_test = model_selection.train_test_split(x, y, test_size = 0.2) # 20 pct of test data
 
-clf = LinearRegression(n_jobs = -1) # regression algorithm
-clf.fit(x_train, y_train)
+# clf = LinearRegression(n_jobs = -1) # regression algorithm classifier
+# clf.fit(x_train, y_train)
+
+# with open('linearregression.pickle', 'wb') as f:
+#     pickle.dump(clf, f)
+
+pick_in = open('linearregression.pickle', 'rb')
+
+clf = pickle.load(pick_in)
+
 accuracy = clf.score(x_test, y_test) # confidence
 
 forecast_set = clf.predict(x_lately)
