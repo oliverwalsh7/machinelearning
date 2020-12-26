@@ -41,7 +41,6 @@ def coefficient_of_determination(orig_ys, ys_line):
 
 xs, ys = create_dataset(40, 40, 2, correlation='pos')
 
-
 m, b = best_fit(xs, ys)
 regression_line = [(m*x) + b for x in xs]
 r_squared = coefficient_of_determination(ys, regression_line)
